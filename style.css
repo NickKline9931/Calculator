@@ -1,0 +1,122 @@
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#cal {
+    height:500px;
+    width: 350px;
+    background-color: black;
+    display: grid;
+    grid-template-areas: 
+    "i i i i"
+    "i i i i"
+    "cl cl d p"
+    "one two three m"
+    "four five six t"
+    "seven eight nine di"
+    "dec zero per e";
+    gap: 3px;
+    padding-top: 15px;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+   
+}
+
+input {
+    grid-area: i;
+    height: 32px;
+    width: 300px;
+    font-size: 24px;
+}
+
+#clear {
+    grid-area: cl;
+    width: 155px;
+}
+
+#delete {
+    grid-area: d;
+}
+
+#plus {
+    grid-area: p;
+}
+
+#minus {
+    grid-area: m;
+}
+
+#multiply {
+    grid-area: t;
+}
+
+#divide {
+    grid-area: di;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#equal {
+    grid-area: e;
+}
+
+#decimal {
+    grid-area: dec;
+    font-size: 40px;
+    display: flex;
+    
+    justify-content: center;
+}
+
+#percent {
+    grid-area: per;
+}
+
+button {
+    height: 65px;
+    width: 75px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
