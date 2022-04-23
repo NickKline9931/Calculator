@@ -6,9 +6,9 @@ let num2 = '';
 let input = document.querySelector('input');
 
 document.querySelector('#clear').addEventListener('click', function() {
-    input.value = " ";
+    input.value = '';
     num1 = '';
-    operator = " ";
+    operator = '';
 });
 
 document.querySelector('#delete').addEventListener('click', function() {
@@ -119,4 +119,52 @@ const operate = function(operator, num1, num2){
 value2();
 operate(operator, num1, num2);
 input.value = operate(operator, num1, num2);
+});
+
+document.body.addEventListener('keydown', function(e) {
+    if (e.key == 1) {
+        input.value += 1;
+    } else if (e.key == 2) {
+        input.value += 2;
+    } else if (e.key == 3) {
+        input.value += 3;
+    } else if (e.key == 4) {
+        input.value += 4; 
+    } else if (e.key == 5) {
+        input.value += 5;
+    } else if (e.key == 6) {
+        input.value += 6; 
+    } else if (e.key == 7) {
+        input.value += 7;
+    } else if (e.key == 8) {
+        input.value += 8;
+    } else if (e.key == 9) {
+        input.value += 9;
+    } else if (e.key == 0) {
+        input.value += 0;
+    }else if (e.key == '.') {
+        input.value += '.';
+    } else if (e.key == "Backspace" || e.key == "Delete") {
+        input.value = input.value.substring(0, input.value.length - 1);
+    } else if (e.key == '+') {
+        operator = '+';
+        value1();
+    } else if (e.key == '-') {
+        operator = '-';
+        value1();
+    } else if (e.key == '*') {
+        operator = '*';
+        value1();
+    } else if (e.key == '/') {
+        operator = '/';
+        value1();
+    } else if (e.key == '=' || e.key == "Enter") {
+        value2();
+        operate(operator, num1, num2);
+        input.value = operate(operator, num1, num2);
+    } else if (e.key == 'c') {
+        input.value = '';
+        num1 = '';
+        operator = '';
+    }
 });
