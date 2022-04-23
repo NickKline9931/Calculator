@@ -1,3 +1,4 @@
+
 #container {
     display: flex;
     justify-content: center;
@@ -15,7 +16,7 @@
     "one two three m"
     "four five six t"
     "seven eight nine di"
-    "dec zero per e";
+    "dec zero e e";
     gap: 3px;
     padding-top: 15px;
     padding: 7px;
@@ -30,87 +31,103 @@ input {
     height: 32px;
     width: 300px;
     font-size: 24px;
+    border-radius: 3px;
 }
 
 #clear {
     grid-area: cl;
     width: 155px;
+    background-color:  rgba(252, 46, 46, 0.959);
 }
 
 #delete {
     grid-area: d;
+    background-color: rgba(252, 46, 46, 0.959);
 }
 
 #plus {
     grid-area: p;
+    background-color: gold;
 }
 
 #minus {
     grid-area: m;
+    background-color: gold;
 }
 
 #multiply {
     grid-area: t;
+    background-color: gold;
 }
 
 #divide {
     grid-area: di;
+    background-color: gold;
 }
 
 #one {
     grid-area: one;
+    background-color: cyan;
 }
 
 #two {
     grid-area: two;
+    background-color: cyan;
 }
 
 #three {
     grid-area: three;
+    background-color: cyan;
 }
 
 #four {
     grid-area: four;
+    background-color: cyan;
 }
 
 #five {
     grid-area: five;
+    background-color: cyan;
 }
 
 #six {
     grid-area: six;
+    background-color: cyan;
 }
 
 #seven {
     grid-area: seven;
+    background-color: cyan;
 }
 
 #eight {
     grid-area: eight;
+    background-color: cyan;
 }
 
 #nine {
     grid-area: nine;
+    background-color: cyan;
 }
 
 #zero {
     grid-area: zero;
+    background-color: cyan;
 }
 
 #equal {
     grid-area: e;
+    background-color: rgb(17, 196, 17);
+    width: 155px;
+    font-size: 40px;
 }
 
 #decimal {
     grid-area: dec;
     font-size: 40px;
     display: flex;
-    
     justify-content: center;
-}
-
-#percent {
-    grid-area: per;
+    background-color: rgb(253, 51, 226);
 }
 
 button {
