@@ -41,72 +41,96 @@ const operate = function(operator, num1, num2){
     }
 console.log(operate("*", 9, 8));
 
-let input = document.querySelector('input');
 
-let number1 = 0;
+let num1 = '';
+
+let input = document.querySelector('input');
+input.value = num1;
 
 document.querySelector('#clear').addEventListener('click', function() {
     input.value = " ";
-    number1 = 0;
+    num1 = '';
+    operator = " ";
+});
+
+document.querySelector('#delete').addEventListener('click', function() {
+    input.value = input.value.substring(0, input.value.length - 1);
+    num1 = num1.substring(0, num1.length - 1);
 });
 
 document.querySelector('#one').addEventListener('click', function() {
     input.value += 1;
-    number1 += '1';
+    num1 += '1';
 });
 
 document.querySelector('#two').addEventListener('click', function() {
     input.value += 2;
-    number1 += '2';
+    num1 += '2';
 });
 
 document.querySelector('#three').addEventListener('click', function() {
     input.value += 3;
-    number1 += '3';
+    num1 += '3';
 });
 
 document.querySelector('#four').addEventListener('click', function() {
     input.value += 4;
-    number1 += '4'
+    num1 += '4'
 });
 
 document.querySelector('#five').addEventListener('click', function() {
     input.value += 5;
-    number1 += '5';
+    num1 += '5';
 });
 
 document.querySelector('#six').addEventListener('click', function() {
     input.value += 6;
-    number1 += '6';
+    num1 += '6';
 });
 
 document.querySelector('#seven').addEventListener('click', function() {
     input.value += 7;
-    number1 += '7';
+    num1 += '7';
 });
 
 document.querySelector('#eight').addEventListener('click', function() {
     input.value += 8;
-    number1 += '8';
+    num1 += '8';
 });
 
 document.querySelector('#nine').addEventListener('click', function() {
     input.value += 9;
-    number1 += '9';
+    num1 += '9';
 });
 
 document.querySelector('#zero').addEventListener('click', function() {
     input.value += 0;
-    number1 += '0';
+    num1 += '0';
 });
 
 document.querySelector('#decimal').addEventListener('click', function() {
     input.value += ".";
-    number1 += '.';
+    num1 += '.';
 });
 
 document.querySelector('#percent').addEventListener('click', function() {
     input.value += "%";
-    number1 += '%';
+    num1 += '%';
 });
+
+let operator;
+
+document.querySelector('#plus').addEventListener('click', function() {
+operator = '+';
+});
+
+document.querySelector('#multiply').addEventListener('click', function() {
+    operator = '*';
+});
+
+document.querySelector('#divide').addEventListener('click', function() {
+    operator = '/';
+});
+
+document.querySelector('#equal').addEventListener('click', operate);
 
