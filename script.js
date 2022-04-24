@@ -56,9 +56,11 @@ document.querySelector('#zero').addEventListener('click', function() {
 });
 
 document.querySelector('#decimal').addEventListener('click', function() {
-    input.value += ".";
-});
-
+if (input.value.includes('.') == false) {
+        input.value += ".";
+}
+    });
+        
 let operator;
 
 document.querySelector('#plus').addEventListener('click', function() {
@@ -167,4 +169,4 @@ document.body.addEventListener('keydown', function(e) {
         num1 = '';
         operator = '';
     }
-});
+})
